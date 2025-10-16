@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(){
+	int M[4][5] = {
+        {10,  5,  3, 18,  4},
+        {15, 25, 11,  7, 12},
+        { 1, 50, 22, 19,  8},
+        {33, 14, 21,  9,  2}
+    };
+    int maiorEle;
+    int linhamaior;
+    int colunamaior;
+    
+    maiorEle=M[0][0];
+    linhamaior=0;
+    colunamaior=0;
+	
+	for(int i=0; i<4; i++){
+		for(int j=0; j<5; j++){
+			
+			if(M[i][j] > maiorEle){
+				maiorEle = M[i][j];
+				linhamaior = i;
+				colunamaior = j;
+			}
+			
+		}
+	}
+	printf("maior elemento é: %d\n", maiorEle);
+	
+	printf("esta localizado na linha %d e coluna %d", linhamaior + 1, colunamaior + 1);
+}
